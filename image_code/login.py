@@ -4,6 +4,7 @@
 from selenium import webdriver
 import time
 import random
+#pip install pillow
 from PIL import Image
 from image_code.ShowapiRequest import ShowapiRequest
 from selenium.webdriver.support import expected_conditions as EC
@@ -53,7 +54,7 @@ def code_online(file_name):
 #判断元素是否存在
 def is_element(id):
     try:
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID,id)))
+        WebDriverWait(driver,10).until(EC.presence_of_element_located((By.ID,id)))
     except:
         return False
     else:

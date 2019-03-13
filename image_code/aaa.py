@@ -2,14 +2,17 @@
 #author：jiguobin
 
 from selenium import webdriver
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+from util.utils import *
+
+
 
 
 driver=webdriver.Chrome()
-driver.get('http://192.168.19.25:8000/cms/login.in')
-
+driver.get('http://intcms.51ebill.com/cms/login.in')
+print(is_title(driver,'dkjsf'))
+print(is_tiele_contain(driver,'首页'))
+print(is_element(driver,'logInNam'))
+#
 # driver.find_element_by_id("logInName").send_keys('jrpt')
 # driver.find_element_by_id("password").send_keys('111qqq')
 
