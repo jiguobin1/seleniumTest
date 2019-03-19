@@ -6,10 +6,21 @@
 # 参数中增添：encoding='UTF-8' 防止（UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 15: illegal multibyte sequence）
 #稍后学习这个
 import configparser
+import os
+
+# cf=configparser.ConfigParser()
+# cf.read('E:\Pythonx\seleniumTest\config\LocalElement.ini',encoding='UTF-8')
+# # print(cf.sections())#获取配置文件中所有节点
+# #print(cf.options("LoginElement"))  #获取节点下所有。。
+# print(cf.get('LoginElement','user_name'))
+
 class ReadIni(object):
+     # 构造函数
     def __init__(self,file_name=None,node=None):
         if file_name == None:
-            file_name = "D:\liantuo\seleniumTest\config\LocalElement.ini"
+            file_name = 'E:\Pythonx\seleniumTest\config\LocalElement.ini'
+        else:
+            self.file_name=file_name
         if node == None:
             self.node = "LoginElement"
         else:
@@ -28,8 +39,9 @@ class ReadIni(object):
 
 
 if __name__ == '__main__':
-   read_init = ReadIni()
-   print(read_init.get_value('user_name'))
+    path=r'E:\Pythonx\seleniumTest\config\testIni.ini'
+    read_init = ReadIni(file_name=path,node='testa')
+    print(read_init.get_value('ji'))
 
 
 
