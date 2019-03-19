@@ -4,6 +4,7 @@
 
 #D:\liantuo\seleniumTest\config\LocalElement.ini
 # 参数中增添：encoding='UTF-8' 防止（UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 15: illegal multibyte sequence）
+#稍后学习这个
 import configparser
 class ReadIni(object):
     def __init__(self,file_name=None,node=None):
