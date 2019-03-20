@@ -3,7 +3,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-
+print('yehuidkjfjdslkjdlfjdl;')
 #验证标题是否存在（精准）
 def is_title(driver,title):
     title=EC.title_is(title)

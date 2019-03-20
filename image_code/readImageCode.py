@@ -1,21 +1,23 @@
 from selenium import webdriver
 import time
-# from PIL import Image
-# from image_code.ShowapiRequest import ShowapiRequest
+from PIL import Image
+from image_code.ShowapiRequest import ShowapiRequest
+from util.find_element import FindElement
+from util.utils import *
+
 driver=webdriver.Chrome()
 driver.get('http://192.168.19.25:8000/cms/login.in')
-driver.find_element_by_id("logInName").send_keys('jrpt')
-driver.find_element_by_id("password").send_keys('111qqq')
 
-time.sleep(5)
-driver.find_element_by_id('submitForm').click()
-#获取元素值
-errror_code=driver.find_element_by_id('errorVerifyCode').text
-while errror_code=='验证码输入错误':
-    time.sleep(5)
-    print('验证码输入错误重新输入')
-    driver.find_element_by_id('submitForm').click()
-
+# driver.find_element_by_id("logInName").send_keys('jrpt')
+# driver.find_element_by_id("password").send_keys('111qqq')
+# time.sleep(5)
+# driver.find_element_by_id('submitForm').click()
+# #获取元素值
+# errror_code=driver.find_element_by_id('errorVerifyCode').text
+# while errror_code=='验证码输入错误':
+#     time.sleep(5)
+#     print('验证码输入错误重新输入')
+#     driver.find_element_by_id('submitForm').click()
 
 
 

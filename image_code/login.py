@@ -1,6 +1,8 @@
 # coding：utf-8
 #author：jiguobin
-
+'''
+使用函数封装
+'''
 from selenium import webdriver
 import time
 import random
